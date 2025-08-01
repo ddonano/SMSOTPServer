@@ -55,7 +55,7 @@ def show_toast_notification(title, message):
 
             # 创建通知
             toast = Notification(
-                app_id="SMSOTPServer",  # 应用标识名称
+                app_id="SmsCodeServer",  # 应用标识名称
                 title=title,
                 msg=message,
                 icon=icon_path,

@@ -69,7 +69,7 @@ exe = EXE(
     a.zipfiles,
     a.datas,
     [],
-    name='SMSCodeServer',
+    name='SmsCodeServer',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
@@ -127,7 +127,7 @@ exe2 = EXE(
     b.zipfiles,
     b.datas,
     [],
-    name='SMSCodeServer_Tray',
+    name='SmsCodeServer_Tray',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
@@ -144,10 +144,10 @@ exe2 = EXE(
 )
 '''
     
-    with open('SMSCodeServer.spec', 'w', encoding='utf-8') as f:
+    with open('SmsCodeServer.spec', 'w', encoding='utf-8') as f:
         f.write(spec_content)
     
-    print("✅ 规范文件创建成功: SMSCodeServer.spec")
+    print("✅ 规范文件创建成功: SmsCodeServer.spec")
 
 def clean_build_dirs():
     """清理构建目录"""
@@ -164,7 +164,7 @@ def build_exe():
     
     try:
         # 使用PyInstaller构建
-        cmd = ['pyinstaller', '--clean', 'SMSCodeServer.spec']
+        cmd = ['pyinstaller', '--clean', 'SmsCodeServer.spec']
         result = subprocess.run(cmd, capture_output=True, text=True)
         
         if result.returncode == 0:
@@ -194,8 +194,8 @@ def show_build_info():
             print(f"📦 {exe_file.name} ({size_mb:.1f} MB)")
     
     print("\n🚀 使用说明:")
-    print("1. 控制台版本: SMSCodeServer.exe")
-    print("2. 托盘版本: SMSCodeServer_Tray.exe")
+    print("1. 控制台版本: SmsCodeServer.exe")
+    print("2. 托盘版本: SmsCodeServer_Tray.exe")
     print("3. 将exe文件复制到任意目录即可使用")
 
 def main():

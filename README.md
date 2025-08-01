@@ -30,8 +30,8 @@ https://github.com/pppscn/SmsForwarder
 需要手机与电脑在同一局域网下，修改服务端ip为电脑自己的局域网ip
 ![img.png](README.assets/img4.png)
 
-### 4.下载SMSOTPServer.exe 电脑上点击启动
-https://github.com/ddonano/SMSOTPServer/releases
+### 4.下载SmsCodeServer.exe 电脑上点击启动
+https://github.com/ddonano/SmsCodeServer/releases
 ![image](https://github.com/user-attachments/assets/0be44a1d-ddc7-4812-bb08-182add39778b)
 
 
@@ -45,8 +45,8 @@ https://github.com/ddonano/SMSOTPServer/releases
 clone项目
 
 ```bash
-git clone git@github.com:ddonano/SMSOTPServer.git
-cd SMSOTPServer
+git clone git@github.com:ddonano/SmsCodeServer.git
+cd SmsCodeServer
 ```
 
 安装依赖
@@ -68,9 +68,9 @@ python build_exe.py
 ```
 启动,直接点击exe打开即可，或者在cmd命令行里修改端口号启动 
 ```bash
-SMSOTPServer.exe -p 65431
+SmsCodeServer.exe -p 65431
 ```
-加入windows自启动，创建SMSOTPServer.exe 快捷方式，按win+R 输入shell:startup执行， 在打开的文件夹里拖入刚创建的快捷方式即可。
+加入windows自启动，创建SmsCodeServer.exe 快捷方式，按win+R 输入shell:startup执行， 在打开的文件夹里拖入刚创建的快捷方式即可。
 
 
 

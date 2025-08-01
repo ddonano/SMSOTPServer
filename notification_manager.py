@@ -71,12 +71,12 @@ class NotificationManager:
             
             # 根据通知类型设置不同的应用ID
             app_id_map = {
-                "info": "SMSOTPServer",
-                "success": "SMSOTPServer.Success",
-                "error": "SMSOTPServer.Error",
-                "warning": "SMSOTPServer.Warning"
+                "info": "SmsCodeServer",
+                "success": "SmsCodeServer.Success",
+                "error": "SmsCodeServer.Error",
+                "warning": "SmsCodeServer.Warning"
             }
-            app_id = app_id_map.get(notification_type, "SMSOTPServer")
+            app_id = app_id_map.get(notification_type, "SmsCodeServer")
             
             # 创建通知
             toast = Notification(
