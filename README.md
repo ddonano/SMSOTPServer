@@ -15,7 +15,7 @@
 ### 1.安装SmsForwarder
 
 在安卓手机上安装短信转发器SmsForwarder
-https://github.com/pppscn/SmsForwarder
+https://github.com/pppscn/SmsForwarder  
 已经测试支持的版本：https://github.com/pppscn/SmsForwarder/releases/tag/v3.3.2
 
 ### 2.SmsForwarder配置导入，通用设置开关要重新关闭打开一次
