@@ -1,5 +1,5 @@
 """
-SMS OTP Server 核心模块
+SmsCodeServer 核心模块
 提供核心的短信验证码处理功能
 """
 

@@ -155,8 +155,8 @@ class TrayManager:
         try:
             # 使用多个通知来显示完整的关于信息
             utils.show_toast_notification(
-                "SMS OTP Server", 
-                "短信验证码转发服务器\n版本: 1.0.0"
+                "SmsCodeServer",
+                "短信验证码转发服务器\n版本: 2.0.0"
             )
             
             # 延迟显示功能说明
@@ -183,7 +183,7 @@ class TrayManager:
         except Exception as e:
             logging.error(f"显示关于信息失败: {e}")
             # 备用方案：显示简单的关于信息
-            utils.show_toast_notification("关于", "SMS OTP Server v1.0.0")
+            utils.show_toast_notification("关于", "SmsCodeServer v1.0.0")
     
     def quit_application(self, icon, item):
         """退出应用程序"""
@@ -228,7 +228,7 @@ class TrayManager:
             menu = self.create_menu()
             
             # 创建托盘图标
-            self.icon = pystray.Icon("sms_server", icon_image, "SMS OTP Server", menu)
+            self.icon = pystray.Icon("sms_server", icon_image, "SmsCodeServer", menu)
             self.is_running = True
             
             # 在新线程中运行托盘图标，设置为非守护线程

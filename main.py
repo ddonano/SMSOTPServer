@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-SMS OTP Server - 控制台版
+SmsCodeServer - 控制台版
 短信验证码转发服务器（简化版）
 """
 
@@ -20,7 +20,7 @@ def print_banner():
     """打印启动横幅"""
     banner = """
 ╔══════════════════════════════════════════════════════════════╗
-║                    SMS OTP Server                            ║
+║                    SmsCodeServer                            ║
 ║              短信验证码转发服务器 - 控制台版                  ║
 ║                                                              ║
 ║  功能: 自动提取短信验证码并复制到剪贴板                      ║
@@ -33,7 +33,7 @@ def print_banner():
 def parse_args():
     """解析命令行参数"""
     parser = argparse.ArgumentParser(
-        description="SMS OTP Server - 短信验证码转发服务器",
+        description="SmsCodeServer - 短信验证码转发服务器",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 使用示例:

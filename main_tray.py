@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-SMS OTP Server with System Tray
+SmsCodeServer with System Tray
 带系统托盘功能的短信验证码转发服务器
 """
 
@@ -278,7 +278,7 @@ class SMSServer:
             # 显示启动通知
             utils.show_toast_notification(
                 "服务器启动", 
-                f"SMS OTP Server 已启动\n监听端口: {self.port}\n程序将继续在后台运行"
+                f"SmsCodeServer 已启动\n监听端口: {self.port}\n程序将继续在后台运行"
             )
             
             # 主服务器循环
@@ -452,7 +452,7 @@ def parse_args():
         sys.stderr = sys.stdout
     
     parser = argparse.ArgumentParser(
-        description="SMS OTP Server - 短信验证码转发服务器",
+        description="SmsCodeServer - 短信验证码转发服务器",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 使用示例:
@@ -478,7 +478,7 @@ def print_banner():
     try:
         banner = """
 ╔══════════════════════════════════════════════════════════════╗
-║                    SMS OTP Server                            ║
+║                    SmsCodeServer                            ║
 ║              短信验证码转发服务器                              ║
 ║                                                              ║
 ║  功能: 自动提取短信验证码并复制到剪贴板                      ║
@@ -489,7 +489,7 @@ def print_banner():
         print(banner)
     except Exception as e:
         # 如果打印失败，记录到日志
-        logging.info("SMS OTP Server 启动")
+        logging.info("SmsCodeServer 启动")
         logging.info("功能: 自动提取短信验证码并复制到剪贴板")
         logging.info("特色: 系统托盘支持、复制历史、状态监控")
 
