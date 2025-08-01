@@ -1,3 +1,10 @@
-winotify
-pyperclip
-pyinstaller
+# 核心依赖
+winotify>=1.1.0
+pyperclip>=1.8.2
+
+# 系统托盘功能
+pystray>=0.19.4
+pillow>=9.0.0
+
+# 开发依赖
+pyinstaller>=5.13.0

@@ -1,3 +1,10 @@
 {
-    "port": 65432
+    "port": 65432,
+    "auto_hide": true,
+    "enable_tray": true,
+    "notification": {
+        "enabled": true,
+        "sound": true,
+        "duration": "long"
+    }
 }

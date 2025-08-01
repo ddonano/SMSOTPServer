@@ -64,7 +64,7 @@ python main.py
 打包成exe启动
 
 ```bash
-pyinstaller -F --add-data "config.json;." --add-data "favicon.ico;." --icon="favicon.ico" --name="SMSOTPServer" main.py
+python build_exe.py
 ```
 启动,直接点击exe打开即可，或者在cmd命令行里修改端口号启动 
 ```bash
