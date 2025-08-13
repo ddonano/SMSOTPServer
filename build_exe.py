@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-SMS OTP Server - EXE打包脚本
+SmsCodeServer - EXE打包脚本
 将项目打包成可执行文件
 """
 
@@ -200,7 +200,7 @@ def show_build_info():
 
 def main():
     """主函数"""
-    print("🚀 SMS OTP Server - EXE打包工具")
+    print("🚀 SmsCodeServer - EXE打包工具")
     print("=" * 50)
     
     # 检查PyInstaller

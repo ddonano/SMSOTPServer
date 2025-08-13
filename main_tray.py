@@ -371,8 +371,10 @@ class SMSServer:
                 else:
                     logging.warning(f"处理短信消息失败，总计: {self.stats['sms_count']}")
             else:
+                utils.show_handler(text)
                 logging.warning(f"未知消息类型: {prefix}")
         else:
+            utils.show_handler(text)
             logging.error("无法匹配到预期格式")
     
     def restart(self):

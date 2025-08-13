@@ -9,10 +9,12 @@ from typing import List, Dict, Any, Optional
 # 导入改进的通知管理器
 try:
     from notification_manager import show_toast_notification, show_success_notification, show_error_notification
+
     NOTIFICATION_AVAILABLE = True
 except ImportError:
     # 如果导入失败，使用原始的通知函数
     from winotify import Notification, audio
+
     NOTIFICATION_AVAILABLE = False
 
 # 配置日志记录
@@ -82,16 +84,24 @@ def caller_handler(text):
     )
 
 
+def show_handler(text):
+    # 显示通知
+    show_toast_notification(
+        f"其他消息",
+        f"原文: {text}"
+    )
+
+
 def copy_verification_code(text):
     global _last_copied
-    
+
     number = extract_first_long_number(text)
     if number:
         # 复制到剪贴板
         try:
             pyperclip.copy(number)
             _last_copied = number
-            
+
             logging.info(f"已复制到剪贴板: {number}")
         except Exception as e:
             logging.error(f"复制到剪贴板失败: {str(e)}")

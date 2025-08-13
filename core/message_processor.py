@@ -6,7 +6,8 @@
 import re
 import logging
 from typing import Dict, Any, Optional, Tuple
-from utils import copy_verification_code, caller_handler
+
+from utils import copy_verification_code, caller_handler,show_handler
 
 class MessageProcessor:
     """消息处理器"""
@@ -35,6 +36,7 @@ class MessageProcessor:
             match = self._split_string_at_first_dot(text)
             if not match:
                 logging.error("❌ 消息格式错误")
+                show_handler(text)
                 return False
             
             prefix, suffix = match
@@ -98,4 +100,5 @@ class MessageProcessor:
                 
         else:
             logging.warning(f"⚠️  未知消息类型: {prefix}")
+            show_handler(suffix)
             return False 
